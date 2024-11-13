@@ -2,14 +2,12 @@ from openai import OpenAI
 import json
 
 
-def CallOpenAI(model, input_text, max_tokens=256, temperature=0,n=1):
-    # api_key= os.getenv("OPENAI_API_KEY")
-    api_key = "sk-eSvitYqDHwPUKyyE30B699641eD243258e76E70aE490D1E4"
-    api_base = "https://api.gptai.cc/v1"
+def CallOpenAI(model, input_text, max_tokens=256, temperature=0, n=1):
+    api_key = ""
+    api_base = ""
     client = OpenAI(api_key=api_key, base_url=api_base)
 
     res = client.chat.completions.create(
-        # model="gpt-3.5-turbo",
         model=model,
         messages=[
             # 设置行为

@@ -28,5 +28,7 @@ def getPromptAnswer(model, question):
 
 
 def Split2SubQuestion(question):
-    return re.findall(r'q\d+:\s*(.*?\?)', question)
+    return re.findall(r"q\d+:\s*(.*?\?)", question)
 
+def Split2SubAnswer(question):
+    return re.findall(r"\ba\d+:\s*([^\n]+)", question, )
